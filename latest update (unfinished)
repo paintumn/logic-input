@@ -1,0 +1,38 @@
+import math
+
+primeAmount = 0
+evenAmount = 0
+oddAmount = 0
+checkFor = input("Do you want to do a range or single number?: ")
+if not(len(checkFor) < 0):
+    while checkFor != "range" and checkFor != "single" and not (
+            checkFor[0] == "r") and not (checkFor[0] == "s"):
+        checkFor = input("Invalid input, type out the first letter of the one you chose: ")
+
+if checkFor == "range" or checkFor[0] == "r":
+    start = int(input("What number do you want to start at?: "))
+    end = int(input("What number do you want to end at?: "))
+    primeNumbers = []
+    # come back to this and save all prime numbers in here and
+    # check to see if it's been called.
+    # if it is considered prime then add it to the array as a divider for future prime numbers
+    for i in range(start, end + 1):
+        if i == 1 or i % 2 == 0 and not (i == 2) or i % 3 == 0 and not (i == 3) or i % 5 == 0 and not (
+                i == 5) or i % 7 == 0 and not (i == 7) or i % 11 == 0 and not (i == 11) or i % 13 == 0 and not (
+                i == 13) or i % 17 == 0 and not (i == 17) or i % 19 == 0 and not (i == 19) or i % 23 == 0 and not (
+                i == 23) or i % 29 == 0 and not (i == 29) or i % 31 == 0 and not (i == 31) or i % 41 == 0 and not (
+                i == 41) or i % 43 == 0 and not (i == 43) or i % 47 == 0 and not (i == 47) or i % 59 == 0 and not (
+                i == 59) or i % 61 == 0 and not (i == 61) and not (i < 0):
+            continue
+        elif 1 + 1 == 2:
+            primeAmount += 1
+
+    for i in range(start, end + 1):
+        if i % 2 == 0:
+            evenAmount += 1
+        elif not (i % 2 == 0):
+            oddAmount += 1
+    print("Prime Numbers: " + str(primeAmount))
+    print("Even Numbers: " + str(evenAmount))
+    print("Odd Numbers: " + str(oddAmount))
+
